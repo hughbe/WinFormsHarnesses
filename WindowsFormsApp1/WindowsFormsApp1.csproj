@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C5385CB2-8175-46DB-A7F1-D19778CEE11F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsApp1</RootNamespace>
+    <AssemblyName>WindowsFormsApp1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="xunit.assert, Version=2.4.1.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.assert.2.4.1\lib\netstandard1.1\xunit.assert.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Columns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Columns.Designer.cs">
+      <DependentUpon>Columns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\SR.cs" />
+    <Compile Include="Groups.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Groups.Designer.cs">
+      <DependentUpon>Groups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImageList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImageList.Designer.cs">
+      <DependentUpon>ImageList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interop\Hhtctl\Interop.HH.cs" />
+    <Compile Include="Interop\Hhtctl\Interop.HH_FTS_QUERYW.cs" />
+    <Compile Include="Interop\Hhtctl\Interop.HH_ALINKW.cs" />
+    <Compile Include="Interop\Kernel32\Interop.GetShortPathNameW.cs" />
+    <Compile Include="Interop\Shell32\Interop.ShellExecuteW.cs" />
+    <Compile Include="Interop\User32\Interop.GetActiveWindow.cs" />
+    <Compile Include="Interop\User32\Interop.SW.cs" />
+    <Compile Include="MyHelp.cs" />
+    <Compile Include="HelpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpForm.Designer.cs">
+      <DependentUpon>HelpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interop\ComCtl32\Interop.CCM.cs" />
+    <Compile Include="Interop\ComCtl32\Interop.HDM.cs" />
+    <Compile Include="Interop\ComCtl32\Interop.LIS.cs" />
+    <Compile Include="Interop\ComCtl32\Interop.LVGMF.cs" />
+    <Compile Include="Interop\ComCtl32\Interop.LVGROUPMETRICS.cs" />
+    <Compile Include="Interop\ComCtl32\Interop.LVFOOTERINFO.cs" />
+    <Compile Include="Interop\ComCtl32\Interop.LITEM.cs" />
+    <Compile Include="Interop\ComCtl32\Interop.LIF.cs" />
+    <Compile Include="Interop\ComCtl32\Interop.LVCF.cs" />
+    <Compile Include="Interop\ComCtl32\Interop.LVCFMT.cs" />
+    <Compile Include="Interop\ComCtl32\Interop.LVCOLUMNW.cs" />
+    <Compile Include="Interop\ComCtl32\Interop.LVFF.cs" />
+    <Compile Include="Interop\ComCtl32\Interop.LVIF.cs" />
+    <Compile Include="Interop\ComCtl32\Interop.LVN.cs" />
+    <Compile Include="Interop\ComCtl32\Interop.LVA.cs" />
+    <Compile Include="Interop\ComCtl32\Interop.LVGA.cs" />
+    <Compile Include="Interop\ComCtl32\Interop.LVGF.cs" />
+    <Compile Include="Interop\ComCtl32\Interop.LVGS.cs" />
+    <Compile Include="Interop\ComCtl32\Interop.LVGROUPW.cs" />
+    <Compile Include="Interop\ComCtl32\Interop.LVIR.cs" />
+    <Compile Include="Interop\ComCtl32\Interop.LVIS.cs" />
+    <Compile Include="Interop\ComCtl32\Interop.LVM.cs" />
+    <Compile Include="Interop\ComCtl32\Interop.LVNI.cs" />
+    <Compile Include="Interop\ComCtl32\Interop.LVSCW.cs" />
+    <Compile Include="Interop\ComCtl32\Interop.LVSIL.cs" />
+    <Compile Include="Interop\ComCtl32\Interop.NM.cs" />
+    <Compile Include="Interop\ComCtl32\Interop.NMLISTVIEW.cs" />
+    <Compile Include="Interop\ComCtl32\Interop.NMLVLINK.cs" />
+    <Compile Include="Interop\ComCtl32\Interop.PBM.cs" />
+    <Compile Include="Interop\ComCtl32\Interop.PBS.cs" />
+    <Compile Include="Interop\ComCtl32\Interop.TBM.cs" />
+    <Compile Include="Interop\ComCtl32\Interop.TBS.cs" />
+    <Compile Include="Interop\Hhtctl\Interop.HH_POPUPW.cs" />
+    <Compile Include="Interop\Hhtctl\Interop.HtmlHelpW.cs" />
+    <Compile Include="Interop\Interop.BOOL.cs" />
+    <Compile Include="Interop\Interop.COLORREF.cs" />
+    <Compile Include="Interop\Interop.IHandle.cs" />
+    <Compile Include="Interop\Interop.Libraries.cs" />
+    <Compile Include="Interop\Interop.PARAM.cs" />
+    <Compile Include="Interop\Interop.RECT.cs" />
+    <Compile Include="Interop\Interop.WindowMessage.cs" />
+    <Compile Include="Interop\User32\Interop.MSG.cs" />
+    <Compile Include="Interop\User32\Interop.NMHDR.cs" />
+    <Compile Include="Interop\User32\Interop.RegisterWindowMessageW.cs" />
+    <Compile Include="Interop\User32\Interop.SendMessageW.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="ProgressBars.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgressBars.Designer.cs">
+      <DependentUpon>ProgressBars.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TrackBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrackBar.Designer.cs">
+      <DependentUpon>TrackBar.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Columns.resx">
+      <DependentUpon>Columns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Groups.resx">
+      <DependentUpon>Groups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpForm.resx">
+      <DependentUpon>HelpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageList.resx">
+      <DependentUpon>ImageList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgressBars.resx">
+      <DependentUpon>ProgressBars.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="TrackBar.resx">
+      <DependentUpon>TrackBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Common\topics.classic.chm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
